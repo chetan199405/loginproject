@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Market Research - TechNova Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0a0f1a;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      background: linear-gradient(to right, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .content h2 {
+      color: #00f260;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 20px;
+      color: #ccc;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      background-color: #0a0f1a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .content h2 {
+        font-size: 1.5rem;
+      }
+
+      .content {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Market Research & Analytics</h1>
+  </header>
+
+  <div class="content">
+    <h2>Empowering Trade with Data</h2>
+    <p>
+      <strong>TechNova Solutions</strong> partners with financial firms, trading agencies, and market analysts to develop advanced market research and analytics platforms. Our IT-driven solutions help businesses interpret real-time trading data, monitor trends, and make informed investment decisions.
+    </p>
+
+    <p>
+      We offer tailored systems that empower institutions to stay ahead in volatile and fast-moving markets using a blend of AI, big data, and secure cloud computing.
+    </p>
+
+    <h2>Our Market Research Services Include:</h2>
+    <ul>
+      <li><strong>Real-Time Market Data Integration:</strong> Connect to trading platforms and APIs to stream live data feeds from stock, forex, and crypto markets.</li>
+      <li><strong>AI-Based Predictive Modeling:</strong> Build models to forecast price movements using machine learning and historical patterns.</li>
+      <li><strong>Sentiment Analysis:</strong> Extract actionable insights from news feeds, financial reports, and social media using NLP tools.</li>
+      <li><strong>Custom Dashboard Development:</strong> Visualize KPIs, technical indicators, and analytics in intuitive web-based dashboards.</li>
+      <li><strong>Backtesting & Strategy Evaluation:</strong> Simulate trading strategies using historical data to test their effectiveness.</li>
+      <li><strong>Cloud Infrastructure for Scalability:</strong> Host large-scale research workloads on secure, auto-scaling cloud environments.</li>
+    </ul>
+
+    <p>
+      Whether you're an investment firm, research agency, or startup in the trading domain, TechNova delivers intelligent software solutions that convert data into financial growth.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 TechNova Solutions — Innovating Market Intelligence.
+  </footer>
+
+</body>
+</html>
+{% endblock %}

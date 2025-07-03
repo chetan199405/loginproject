@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-box {
+            background-color: #fff;
+            padding: 50px 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f67280;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f5576c;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .note a {
+            color: #f67280;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-box">
+        <h1>REGISTRATION</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+        <div class="note">
+            Already have an account? <a href="{% url 'login' %}">Login here</a>
+        </div>
+        <div class="note">
+            <a href="{% url 'home' %}">Home</a>
+          </div>
+    </div>
+
+</body>
+</html>

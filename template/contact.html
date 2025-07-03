@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - TechNova Solutions</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      background-color: #0b1e2d;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #30cfd0, #330867);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .form-section, .info-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .form-section button {
+      background-color: #30cfd0;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .form-section button:hover {
+      background-color: #2bb3bd;
+    }
+
+    .info-section h2 {
+      margin-bottom: 10px;
+      color: #30cfd0;
+    }
+
+    .info-section p {
+      margin: 10px 0;
+      color: #ddd;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #30cfd0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0b1e2d;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <div class="container">
+    <div class="contact-form">
+      <div class="form-section">
+        <form method="POST" action="{% url 'submit_contact' %}">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="phone" name="phone" placeholder="Your Phone_No" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="info-section">
+        <h2>Get in Touch</h2>
+        <p><strong>Email:</strong> contact@technovasolutions.com</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Address:</strong> 123 Innovation Tower, Bengaluru, India</p>
+
+        <h2>Follow Us</h2>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 TechNova Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>
+{% endblock %}

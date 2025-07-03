@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Products - TechNova Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      padding-left: 120px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #0b1e2d;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      background: linear-gradient(to right, #30cfd0, #330867);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      color: #30cfd0;
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      background-color: #0b1e2d;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .intro {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Products & Services</h1>
+  </header>
+
+  <div class="intro">
+    <p>
+      At <strong>TechNova Solutions</strong>, we specialize in delivering innovative digital products and IT services that empower businesses to thrive in a tech-driven world. Our offerings are tailored to meet diverse needs across industries like finance, healthcare, logistics, and e-commerce.
+    </p>
+  </div>
+
+  <div class="products">
+    <div class="card">
+      <h3>Custom Software Development</h3>
+      <p>We build scalable, secure, and high-performance software solutions tailored to your business requirements using the latest technologies.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web & Mobile Applications</h3>
+      <p>Our team designs responsive websites and native/hybrid apps with a focus on user experience, speed, and functionality.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Infrastructure</h3>
+      <p>Leverage AWS, Azure, or GCP for scalable cloud deployment, CI/CD pipelines, and cost-effective infrastructure management.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI & Data Analytics</h3>
+      <p>Transform raw data into actionable insights with AI-powered dashboards, machine learning models, and predictive analytics.</p>
+    </div>
+
+    <div class="card">
+      <h3>DevOps & Automation</h3>
+      <p>Accelerate development cycles with automated testing, deployment, and monitoring using tools like Docker, Jenkins, and Ansible.</p>
+    </div>
+
+    <div class="card">
+      <h3>IT Consulting</h3>
+      <p>Our experienced consultants guide digital transformation, technology integration, and IT strategy planning for enterprises.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 TechNova Solutions. Empowering Businesses with Technology.
+  </footer>
+
+</body>
+</html>
+{% endblock %}

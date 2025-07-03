@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚀 TechNova Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+
+    h2 {
+      color: #333;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #007bff;
+    }
+
+    .brand {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="brand">🚀 TechNova Solutions </div>
+    <div class="tagline">Delivering smart digital solutions with passion and precision.</div>
+
+    <h2>Welcome {{ user.username }}</h2>
+
+    {% if user.is_authenticated %}
+      <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+      <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+  </div>
+
+</body>
+</html>

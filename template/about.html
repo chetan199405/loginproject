@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - TechNova Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1c1c1c, #2c3e50);
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0f2027;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .container h2 {
+      color: #00f260;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background-color: #0f2027;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container h2 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechNova Solutions</h1>
+  </header>
+
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      At <strong>TechNova Solutions</strong>, we are passionate about delivering cutting-edge technology solutions that drive business success. Founded in 2012, we specialize in custom software development, web and mobile applications, cloud services, and digital transformation strategies.
+    </p>
+    <p>
+      Our team of expert developers, designers, and consultants work collaboratively to turn complex business challenges into scalable and efficient digital products. We serve clients across various industries, including healthcare, finance, e-commerce, education, and logistics.
+    </p>
+    <p>
+      Our core services include:
+      <ul>
+        <li>Custom Software Development</li>
+        <li>Web & Mobile App Design</li>
+        <li>Cloud Infrastructure and DevOps</li>
+        <li>AI & Data Analytics Integration</li>
+        <li>IT Consulting & Project Management</li>
+      </ul>
+    </p>
+    <p>
+      With innovation at our core, we help businesses stay ahead in a rapidly evolving digital world.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 TechNova Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>
+{% endblock %}
