@@ -6,7 +6,7 @@ db_name = "mydb"
 db_user = "postgres"
 db_password = "1234"
 
-csv_file_path = "userdata.csv"  # Make sure this file is in the same folder as your script
+csv_file_path = "userdata.csv"  # Make sure this file is in the same folder
 
 try:
     conn = psycopg2.connect(
